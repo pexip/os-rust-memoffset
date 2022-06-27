@@ -1,0 +1,19 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memoffset 0.6.5 --all-targets --all-features
+Features: test-name=rust-memoffset:@
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memoffset 0.6.5 --all-targets 
+Features: test-name=librust-memoffset-dev:default
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memoffset 0.6.5 --all-targets --no-default-features --features unstable_const
+Features: test-name=librust-memoffset-dev:unstable_const
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memoffset 0.6.5 --all-targets --no-default-features
+Features: test-name=librust-memoffset-dev:
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable

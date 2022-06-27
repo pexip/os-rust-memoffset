@@ -1,0 +1,38 @@
+Source: rust-memoffset
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>,
+ librust-autocfg-1+default-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/memoffset]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/memoffset
+Rules-Requires-Root: no
+
+Package: librust-memoffset-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-autocfg-1+default-dev
+Provides:
+ librust-memoffset+default-dev (= ${binary:Version}),
+ librust-memoffset+unstable-const-dev (= ${binary:Version}),
+ librust-memoffset-0-dev (= ${binary:Version}),
+ librust-memoffset-0+default-dev (= ${binary:Version}),
+ librust-memoffset-0+unstable-const-dev (= ${binary:Version}),
+ librust-memoffset-0.6-dev (= ${binary:Version}),
+ librust-memoffset-0.6+default-dev (= ${binary:Version}),
+ librust-memoffset-0.6+unstable-const-dev (= ${binary:Version}),
+ librust-memoffset-0.6.5-dev (= ${binary:Version}),
+ librust-memoffset-0.6.5+default-dev (= ${binary:Version}),
+ librust-memoffset-0.6.5+unstable-const-dev (= ${binary:Version})
+Description: Offset_of functionality for Rust structs - Rust source code
+ This package contains the source for the Rust memoffset crate, packaged by
+ debcargo for use with cargo and dh-cargo.
