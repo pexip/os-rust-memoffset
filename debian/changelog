@@ -1,3 +1,9 @@
+rust-memoffset (0.6.5-1pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Thu, 26 Jan 2023 18:00:18 +0000
+
 rust-memoffset (0.6.5-1) unstable; urgency=medium
 
   * Team upload.
